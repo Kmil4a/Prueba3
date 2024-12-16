@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Iniciar Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-card>
+      <img
+        alt="inacap"
+        src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/f0/16/58f01608-ce85-e223-b4f1-61ab32b36ec9/AppIcon-0-0-1x_U007epad-0-85-220.png/1200x630wa.png"
+      />
+      <ion-card-header>
+        <ion-card-title>Bienvenido a Inacap</ion-card-title>
+        <ion-card-subtitle>Ingrese credenciales</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input
+          [(ngModel)]="emailValue"
+          type="email"
+          label="Ingrese email:"
+          labelPlacement="floating"
+          placeholder="Ej: nombre@inacapmail.cl"
+        ></ion-input>
+        <ion-input
+          [(ngModel)]="passValue"
+          type="password"
+          label="Ingrese contraseña:"
+          labelPlacement="floating"
+          placeholder="Ej: 123456"
+        ></ion-input>
+        <ion-button (click)="login()" expand="block">Ingresar</ion-button>
+        <ion-button (click)="navigateToRegistro()" expand="block"
+          >Registrarse</ion-button
+        >
+        <ion-button (click)="navigateToRecuperar()" expand="block"
+          >Recuperar contrase&ntilde;a</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>

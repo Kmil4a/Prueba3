@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Bienvenido a la pagina de Inacap </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Aqui encontraras informacion acerca de docentes y estudiantes.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card routerLink="/docente">
+    <ion-card-header>
+      <ion-card-title>Ver Usuarios API Random</ion-card-title>
+    </ion-card-header>
+
+    <ion-img
+      src="https://img.freepik.com/vector-gratis/coleccion-docentes_23-2148534611.jpg?semt=ais_hybrid"
+      alt="docentes"
+    ></ion-img>
+  </ion-card>
+
+  <ion-card routerLink="/alumno">
+    <ion-card-header>
+      <ion-card-title>Ver Usuarios Firebase</ion-card-title>
+    </ion-card-header>
+
+    <ion-img
+      src="https://img.freepik.com/vector-premium/grupo-alumnos-personajes-dibujos-animados-ninos-ninas-escuela_102902-342.jpg"
+      alt="alumnos"
+    ></ion-img>
+  </ion-card>
+</ion-content>

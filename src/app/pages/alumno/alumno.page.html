@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Usuarios Firebase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Usuarios Firebase</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle
+        >Información de los usuarios de Firebase</ion-card-subtitle
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      Estos son los usuarios registrados en Firebase
+      <ion-list>
+        <ion-item *ngFor="let alumno of alumnos">
+          <ion-thumbnail slot="start">
+            <img
+              alt="user icon"
+              src="https://static.vecteezy.com/system/resources/thumbnails/008/442/086/small_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg"
+            />
+          </ion-thumbnail>
+          <ion-label
+            ><p>{{ alumno.uid }}</p>
+            <p>{{ alumno.email }}</p></ion-label
+          >
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
